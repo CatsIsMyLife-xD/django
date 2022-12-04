@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block title%}
+{{title}}
+{%endblock%}
+{% block content %}
+
+<h2 class="text-lg-center">Оставленные отзывы пользователей</h2>
+<div class="row g-4 py-5 row-cols-1 row-cols-lg-3">
+    {% for el in tasks %}
+    <div class="feature col">
+        <div class="card text mb-3" style="max-width: 18rem;">
+            <div class="card-header">{{el.tittle}}</div>
+            <div class="card-body">
+              <p class="card-text">{{el.task}}</p>
+            </div>
+        </div> 
+    </div>
+    {% endfor %}
+</div>    
+
+
+{% endblock content %}

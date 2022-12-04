@@ -1,0 +1,90 @@
+<!-- templates/home.html -->
+{% extends 'base.html' %}
+
+{% block title%}
+Главная страница
+{%endblock%}
+
+{% block content %}
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://bootstrap-5.ru/docs/5.2/assets/css/docs.css" rel="stylesheet">
+  <title>Bootstrap Example</title>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+<h1 class="text-lg-center">Домашняя страница</h1>  
+<div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="false">
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+  </div>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="https://get.wallhere.com/photo/1920x1080-px-landscape-mountain-nebula-space-stars-1106786.jpg" class="d-block w-100" alt="...">
+      <div class="carousel-caption d-none d-md-block">
+        <h5>Первый пейзаж - тут красиво</h5>
+        <p>Посмотрите на данный пейзаж, расслабьтесь перед покупкой товаров </p>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <img src="https://fikiwiki.com/uploads/posts/2022-02/1644936465_36-fikiwiki-com-p-krasivie-kartinki-1920kh1080-na-rabochii-s-48.jpg" class="d-block w-100" alt="...">
+      <div class="carousel-caption d-none d-md-block">
+        <h5>Посмотрите насколько прекрасный лес с горами и мостом </h5>
+        <p>Вы можете посетить данное место если будут экономить и применять скидочные купоны</p>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <img src="https://million-wallpapers.ru/wallpapers/4/71/17753684675035058974/pejzazh-rechka-gornaya-les-i-gora.jpg" class="d-block w-100" alt="...">
+      <div class="carousel-caption d-none d-md-block">
+        <h5>Прекрасные буйные воды на фоне крепкой горы и душистого леса</h5>
+        <p>Отвлекитесь от жизненной суеты и преставьте свежесть данного места</p>
+      </div>
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Предыдущий</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Следующий</span>
+  </button>
+</div>
+  <h2 class="text-lg-left">День рождения организации - <span class="mark">17 августа 1967 года</span> </h2> 
+  <h2 class="text-lg-left">Создание сайта - <span class="mark">3 декабря 2022 года</span></span> </h2> 
+  <p class="placeholder-glow">
+    <span class="placeholder col-12"></span>
+  </p>
+  <center>
+    <h2 class="text-lg-left">Праздники и новости </h2> 
+    <a href="news" class="btn btn-outline-primary">Праздники и новости</a>
+  </center>
+
+  <p class="placeholder-glow">
+    <span class="placeholder col-12"></span>
+  </p>
+  <h2>Изменения в каталоге - последний пост</h2>
+  <div class="row mb-2">
+    <div class="col-md-6">
+      <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+        <div class="col p-4 d-flex flex-column position-static">
+          <strong class="d-inline-block mb-2 text-primary">Последний пост</strong>
+          <h3 class="mb-0">{{description.product_name}}</h3>
+          <div class="mb-1 text-muted">{{description.code}}</div>
+          <p class="card-text mb-auto">{{description.description}}</p>
+          <a href="catalog" class="stretched-link">Перейти в каталог</a>
+        </div>
+        <div class="col-auto d-none d-lg-block">
+          <img src = "{{description.image.url}}" width="100%" height="225">
+
+        </div>
+      </div>
+    </div>
+
+
+
+{% endblock content %}

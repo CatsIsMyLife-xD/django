@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+
+{% block title%}
+{{title}}
+{%endblock%}
+{% block content %}
+<h2 class="text-lg-center">Праздники и новости</h2>
+<p class="placeholder-glow">
+    <span class="placeholder col-12"></span>
+  </p>
+
+<div class="album py-5 bg-light">
+  <div class="container">
+    
+      <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+        {% for el in news_description %}
+        <div class="col">
+          <div class="card shadow-sm">
+            <h5 class="text-sm-center"> {{el.news_name}} </h5> 
+            <img src = "{{el.news_image.url}}" width="100%" height="225">
+            <div class="card-body">
+              <p class="card-text">{{el.news_description}}</p>
+              <div class="d-flex justify-content-between align-items-center">
+              </div>
+            </div>
+          </div>
+        </div>
+        {% endfor %}  
+    </div>
+  </div>
+</div>
+
+{% endblock content %}

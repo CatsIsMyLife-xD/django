@@ -1,0 +1,19 @@
+<!-- templates/about.html -->
+{% extends 'base.html' %}
+
+{% block title%}
+Войти
+{%endblock%}
+
+{% block content %}
+
+<h1>Войти</h1>
+<form action="." method="post">
+    {{ user_form }}
+    <br>   
+    {% csrf_token %}
+    <br>
+    <button class="w-100 btn btn-lg btn-primary" type="submit">Войти</button>
+</form>
+
+{% endblock content %}

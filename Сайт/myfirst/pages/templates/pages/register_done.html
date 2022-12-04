@@ -1,0 +1,12 @@
+<!-- templates/about.html -->
+{% extends 'base.html' %}
+
+{% block title%}
+Успешная регистрация
+{%endblock%}
+
+{% block content %}
+    <h1>Доброе пожаловать {{ new_user.first_name }}!</h1>
+    <h3>Ты успешно зарегистрировался <a href="{% url "auth" %}">Войти в аккаунт</a>.</h3>
+{% endblock %}
+

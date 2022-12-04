@@ -1,0 +1,23 @@
+<!-- templates/about.html -->
+{% extends 'base.html' %}
+
+{% block title%}
+{{title}}
+{%endblock%}
+
+{% block content %}
+<h1 class="text-lg-center">Контактные данные об организации</h1>    
+    {% for el in adress %} 
+    <div class="alert alert-primary" role="alert">
+        <center><h2 class="fs-3">{{el.tittle}}</h2></cetner>
+        <h4 class="text-xxl-center"> {{el.name}} </h4>
+        <h4 class="text-xxl-center"> {{el.address}} </h4>
+        <h4 class="text-xxl-center"> {{el.phone}} </h4>
+    </div>
+    {% endfor %}
+    <h3 class="text-lg-center">Карта проезда</h3>
+    <center>
+      <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A3d3e765fb36e59bff058ff838832b51d25c05671dc71b036d7350076a8d42166&amp;width=800&amp;height=400&amp;lang=ru_RU&amp;scroll=true"></script>
+    </center>
+
+{% endblock content %}
